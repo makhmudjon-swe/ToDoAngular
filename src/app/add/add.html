@@ -1,0 +1,19 @@
+<div>
+  <form
+    class="flex items-center border border-gray-300 bg-gray-100 rounded-full overflow-hidden w-full max-w-md"
+    [formGroup]="todoForm"
+  >
+    <input
+      type="text"
+      formControlName="description"
+      placeholder="add your task here"
+      class="flex-grow rounded-full px-4 py-2 bg-gray-100 focus:outline-none text-gray-600 placeholder-gray-500"
+    />
+    <button
+      (click)="onSubmit()"
+      class="bg-red-500 cursor-pointer hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-full transition duration-200"
+    >
+      Add
+    </button>
+  </form>
+</div>
