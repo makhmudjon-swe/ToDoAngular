@@ -15,7 +15,15 @@ export class TodoList implements OnInit {
     this.todoList = this.todoService.getTodo();
   }
 
-  constructor() {
-    console.log(this.todoList);
+  deleteTodo(id: number): void {
+    this.todoService.deleteTodo(id);
+    this.todoList = this.todoService.getTodo();
   }
+
+  selectedId: number | null = null;
+
+  onSelect(id: number): void {
+    this.selectedId = id;
+  }
+
 }
